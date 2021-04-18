@@ -1,0 +1,17 @@
+type Query {
+  userById(id: ID): User
+}
+
+type User {
+  id: ID
+  name: String
+  country: String
+  favProgramInfo: [ProgramInfo!]
+}
+
+type ProgramInfo{
+  id: ID
+  userId: ID
+  programId: ID
+  isAdultContent: Boolean
+}
